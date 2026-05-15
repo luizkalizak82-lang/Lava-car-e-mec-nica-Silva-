@@ -1,130 +1,128 @@
-/* RESET E CORES */
+/* RESET PARA GARANTIR QUE FIQUE IGUAL EM TODOS OS CELULARES */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-    --bg-black: #000000;
-    --logo-red: #ff0000;
-    --text-white: #ffffff;
-    --card-bg: #0c0c0c;
-}
 
 body {
-    background-color: var(--bg-black);
-    color: var(--text-white);
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
-.site-wrapper {
+.container-principal {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     padding: 20px;
     text-align: center;
 }
 
-/* HEADER E LOGO */
-.logo-header {
+/* LOGO CENTRALIZADA COM ESTILO ROBUSTO */
+.topo-logo {
     margin-top: 20px;
-    margin-bottom: 10px;
 }
 
-.car-illustration svg {
+.ilustracao-carro svg {
     width: 100%;
+    max-width: 350px;
     height: auto;
-    max-width: 380px;
 }
 
-.brand-sub {
-    font-size: 16px;
-    font-weight: bold;
+.legenda {
+    font-size: 14px;
+    font-weight: 800;
     letter-spacing: 2px;
     margin-top: -10px;
 }
 
-.brand-main {
-    font-size: 85px;
+.nome-principal {
+    font-size: 80px;
     font-weight: 900;
     font-style: italic;
-    color: var(--logo-red);
+    color: #ff0000;
     line-height: 0.8;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
+    margin-top: 5px;
 }
 
-.divider-line {
+.linha-separadora {
     border: none;
     height: 3px;
-    background-color: var(--logo-red);
+    background-color: #ff0000;
     margin: 25px 0;
 }
 
-/* SERVIÇOS */
-.services-container {
+/* CARDS DE SERVIÇOS */
+.grid-servicos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin-bottom: 30px;
 }
 
-.service-item {
-    background: var(--card-bg);
+.cartao-servico {
+    background: #0d0d0d;
     border: 1px solid #222;
-    padding: 15px 5px;
-    border-radius: 10px;
+    padding: 20px 5px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
-.service-item:hover { border-color: var(--logo-red); }
+.cartao-servico:hover { border-color: #ff0000; }
 
-.service-item i {
-    color: var(--logo-red);
-    font-size: 24px;
-    margin-bottom: 8px;
+.cartao-servico i {
+    color: #ff0000;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.service-info h3 { font-size: 11px; font-weight: 900; }
-.service-info p { font-size: 10px; color: #888; }
+.info h3 { font-size: 11px; font-weight: 900; }
+.info span { font-size: 10px; color: #777; }
 
-/* RODAPÉ */
-.call-to-action {
-    font-size: 14px;
+/* CONTATOS E LOCALIZAÇÃO */
+.chamada {
+    font-size: 13px;
     font-weight: bold;
-    color: #bbb;
+    color: #aaaaaa;
     margin-bottom: 20px;
 }
 
-.contacts {
+.telefones {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.contacts a {
-    color: white;
+.telefones a {
+    color: #fff;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.contacts i { color: #25d366; } /* Verde do Whats */
+.telefones i { color: #25d366; }
 
-.location {
+.endereco {
     font-size: 11px;
-    color: #777;
+    color: #888;
     margin-bottom: 25px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-.btn-whatsapp {
-    background-color: var(--logo-red);
-    color: white;
+.botao-acao {
+    background-color: #ff0000;
+    color: #fff;
     border: none;
     width: 100%;
     padding: 18px;
     font-size: 16px;
     font-weight: 900;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     text-transform: uppercase;
 }
