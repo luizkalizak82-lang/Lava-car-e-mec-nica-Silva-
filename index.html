@@ -9,71 +9,62 @@
 </head>
 <body>
 
-    <div class="main-container">
-        <header class="header-logo">
-            <div class="car-icon">
-                <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50,110 L150,110 C180,110 200,60 300,55 C400,50 450,110 480,120 L50,120 Z" fill="none" stroke="#e60000" stroke-width="8" stroke-linecap="round"/>
-                    <path d="M220,65 C280,60 350,60 380,105" fill="none" stroke="#e60000" stroke-width="5" stroke-linecap="round"/>
+    <div class="site-wrapper">
+        <header class="logo-header">
+            <div class="car-illustration">
+                <svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40,90 L100,90 L110,85 C140,40 280,10 440,85 L460,90" fill="none" stroke="#ff0000" stroke-width="12" stroke-linecap="round"/>
+                    <path d="M180,50 C250,25 380,30 420,80" fill="none" stroke="#ff0000" stroke-width="8" stroke-linecap="round"/>
                 </svg>
             </div>
-            <div class="brand">
-                <p class="sub-text">MECÂNICA E LAVA CAR</p>
-                <h1 class="main-name">SILVA</h1>
+            <div class="logo-text-box">
+                <p class="brand-sub">MECÂNICA E LAVA CAR</p>
+                <h1 class="brand-main">SILVA</h1>
             </div>
         </header>
 
-        <section class="services-grid">
-            <div class="service-card" onclick="agendar('Mecânica em Geral')">
-                <i class="fas fa-cog"></i>
-                <div class="text">
-                    <h3>MECÂNICA EM GERAL</h3>
-                    <span>General Mechanics</span>
+        <hr class="divider-line">
+
+        <main class="content">
+            <div class="services-container">
+                <div class="service-item" onclick="agendar('Mecânica em Geral')">
+                    <i class="fas fa-cog"></i>
+                    <div class="service-info">
+                        <h3>MECÂNICA EM GERAL</h3>
+                        <p>General Mechanics</p>
+                    </div>
+                </div>
+                <div class="service-item" onclick="agendar('Troca de Óleo')">
+                    <i class="fas fa-oil-can"></i>
+                    <div class="service-info">
+                        <h3>TROCA DE ÓLEO</h3>
+                        <p>Oil Change</p>
+                    </div>
+                </div>
+                <div class="service-item" onclick="agendar('Suspensão')">
+                    <i class="fas fa-tools"></i>
+                    <div class="service-info">
+                        <h3>SUSPENSÃO</h3>
+                        <p>Suspension</p>
+                    </div>
+                </div>
+                <div class="service-item" onclick="agendar('Lavação')">
+                    <i class="fas fa-car-wash"></i>
+                    <div class="service-info">
+                        <h3>LAVAÇÃO</h3>
+                        <p>Car Wash</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="service-card" onclick="agendar('Troca de Óleo')">
-                <i class="fas fa-oil-can"></i>
-                <div class="text">
-                    <h3>TROCA DE ÓLEO</h3>
-                    <span>Oil Change</span>
+            <div class="action-footer">
+                <p class="call-to-action">AGENDE SEU HORÁRIO E VENHA FAZER SUA REVISÃO!</p>
+                
+                <div class="contacts">
+                    <a href="https://wa.me/5547991517931"><i class="fab fa-whatsapp"></i> 47 991517931</a>
+                    <a href="tel:47996837570"><i class="fas fa-mobile-alt"></i> 47 996837570</a>
                 </div>
-            </div>
 
-            <div class="service-card" onclick="agendar('Suspensão')">
-                <i class="fas fa-tools"></i>
-                <div class="text">
-                    <h3>SUSPENSÃO</h3>
-                    <span>Suspension</span>
-                </div>
-            </div>
-
-            <div class="service-card" onclick="agendar('Lavação')">
-                <i class="fas fa-car-wash"></i>
-                <div class="text">
-                    <h3>LAVAÇÃO</h3>
-                    <span>Car Wash</span>
-                </div>
-            </div>
-        </section>
-
-        <footer class="contact-section">
-            <h2>AGENDE SEU HORÁRIO E VENHA FAZER SUA REVISÃO!</h2>
-            
-            <div class="phones">
-                <a href="https://wa.me/5547991517931" class="phone-link"><i class="fab fa-whatsapp"></i> 47 991517931</a>
-                <a href="tel:47996837570" class="phone-link"><i class="fas fa-mobile-alt"></i> 47 996837570</a>
-            </div>
-
-            <div class="address">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Av. Marginal Oeste, nº 136, Esquina R. 906 - Alto São Bento, Itapema, Brazil 88220000</p>
-            </div>
-
-            <button class="btn-agendar" onclick="agendar('Geral')">AGENDAR AGORA</button>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Av. Marginal Oeste, nº 136, Esquina R.
