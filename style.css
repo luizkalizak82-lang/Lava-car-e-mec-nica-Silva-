@@ -1,12 +1,38 @@
-/* DESIGN TOTAL DARK - FIEL À MARCA */
+/* DESIGN TOTAL DARK */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: #000000; /* Fundo Preto */
-    color: #ffffff; /* Letras Brancas */
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
+}
+
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
 }
 
 .container-principal {
@@ -16,113 +42,34 @@ body {
     text-align: center;
 }
 
-/* LOGO TIPO IMPACTO */
+/* LOGO E IDENTIDADE */
 .topo-logo { margin-top: 10px; }
 .ilustracao-carro svg { width: 100%; max-width: 320px; height: auto; }
-
-.legenda {
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-top: -15px;
-    color: #ffffff;
-}
-
+.legenda { font-size: 15px; font-weight: 900; letter-spacing: 2px; margin-top: -15px; color: #ffffff; }
 .nome-principal {
-    font-size: 85px; /* SILVA GIGANTE */
-    font-weight: 900;
-    font-style: italic;
-    color: #ff0000; /* Vermelho da Logo */
-    line-height: 0.8;
-    letter-spacing: -4px;
+    font-size: 85px; font-weight: 900; font-style: italic; color: #ff0000;
+    line-height: 0.8; letter-spacing: -4px;
 }
 
-.linha-separadora {
-    border: none;
-    height: 4px;
-    background-color: #ff0000;
-    margin: 25px 0;
-}
+.linha-separadora { border: none; height: 4px; background-color: #ff0000; margin: 25px 0; }
 
-/* STATUS PISCANTE */
-.status-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.led-blink {
-    width: 12px; height: 12px;
-    background-color: #ff0000;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #ff0000;
-    animation: pulsar 1s infinite;
-}
-
+/* STATUS BOX */
+.status-box { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 25px; }
+.led-blink { width: 12px; height: 12px; background-color: #ff0000; border-radius: 50%; box-shadow: 0 0 10px #ff0000; animation: pulsar 1s infinite; }
 @keyframes pulsar { 0% { opacity: 1; } 50% { opacity: 0.2; } 100% { opacity: 1; } }
-
 .status-text { font-size: 13px; font-weight: bold; color: #ffffff; }
 
-/* LISTA DE SERVIÇOS DARK */
-.lista-servicos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.item-servico {
-    background: #111;
-    border: 1px solid #333;
-    padding: 20px 10px;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
+/* GRID SERVIÇOS */
+.lista-servicos { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+.item-servico { background: #111; border: 1px solid #333; padding: 20px 10px; border-radius: 12px; cursor: pointer; }
 .item-servico i { color: #ff0000; font-size: 26px; margin-bottom: 10px; }
 .detalhe h3 { font-size: 11px; font-weight: 900; color: #ffffff; }
 .detalhe span { font-size: 10px; color: #777; }
 
-/* RODAPÉ E CONTATOS */
+/* RODAPÉ INFO */
 .chamada { font-size: 13px; font-weight: bold; color: #bbb; margin-bottom: 20px; }
-.contatos-whats {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 20px;
-}
-
-.contatos-whats a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
+.contatos-whats { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.contatos-whats a { color: #ffffff; text-decoration: none; font-size: 18px; font-weight: 900; display: flex; align-items: center; justify-content: center; gap: 10px; }
 .contatos-whats i { color: #25d366; font-size: 22px; }
-
-.localizacao {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 30px;
-    line-height: 1.4;
-}
-
-.botao-whatsapp {
-    background-color: #ff0000;
-    color: #ffffff;
-    border: none;
-    width: 100%;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 900;
-    border-radius: 8px;
-    cursor: pointer;
-    text-transform: uppercase;
-}
+.localizacao { font-size: 12px; color: #888; margin-bottom: 30px; line-height: 1.4; }
+.botao-whatsapp { background-color: #ff0000; color: #ffffff; border: none; width: 100%; padding: 20px; font-size: 18px; font-weight: 900; border-radius: 8px; cursor: pointer; text-transform: uppercase; }
