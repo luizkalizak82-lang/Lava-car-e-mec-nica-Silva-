@@ -1,83 +1,66 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mecânica e Lava Car Silva</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+/* RESET GERAL */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <div class="container-principal">
-        <header class="topo-logo">
-            <div class="ilustracao-carro">
-                <svg viewBox="0 0 500 130" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30,100 L110,100 L125,95 C160,45 280,15 450,95 L475,100" fill="none" stroke="#ff0000" stroke-width="12" stroke-linecap="round"/>
-                    <path d="M190,55 C260,30 390,35 430,90" fill="none" stroke="#ff0000" stroke-width="8" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <div class="textos-marca">
-                <p class="legenda">MECÂNICA E LAVA CAR</p>
-                <h1 class="nome-principal">SILVA</h1>
-            </div>
-        </header>
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
 
-        <hr class="linha-separadora">
+.container-principal {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    text-align: center;
+}
 
-        <div class="status-box">
-            <div class="led-blink"></div>
-            <span class="status-text">STATUS DO BOX: <strong id="vagas-count">2</strong> VAGAS PARA HOJE</span>
-        </div>
+/* LOGO FIEL */
+.topo-logo { margin-top: 10px; }
+.ilustracao-carro svg { width: 100%; max-width: 350px; height: auto; }
+.legenda { font-size: 14px; font-weight: 800; letter-spacing: 2.5px; margin-top: -10px; }
+.nome-principal {
+    font-size: 80px; font-weight: 900; font-style: italic;
+    color: #ff0000; line-height: 0.8; letter-spacing: -3px; margin-top: 5px;
+}
 
-        <main class="grid-servicos">
-            <div class="cartao-servico" onclick="abrirZap('Mecânica em Geral')">
-                <i class="fas fa-cog"></i>
-                <div class="info">
-                    <h3>MECÂNICA EM GERAL</h3>
-                    <span>General Mechanics</span>
-                </div>
-            </div>
-            <div class="cartao-servico" onclick="abrirZap('Troca de Óleo')">
-                <i class="fas fa-oil-can"></i>
-                <div class="info">
-                    <h3>TROCA DE ÓLEO</h3>
-                    <span>Oil Change</span>
-                </div>
-            </div>
-            <div class="cartao-servico" onclick="abrirZap('Suspensão')">
-                <i class="fas fa-tools"></i>
-                <div class="info">
-                    <h3>SUSPENSÃO</h3>
-                    <span>Suspension</span>
-                </div>
-            </div>
-            <div class="cartao-servico" onclick="abrirZap('Lavação')">
-                <i class="fas fa-car-wash"></i>
-                <div class="info">
-                    <h3>LAVAÇÃO</h3>
-                    <span>Car Wash</span>
-                </div>
-            </div>
-        </main>
+.linha-separadora { border: none; height: 3px; background-color: #ff0000; margin: 25px 0; }
 
-        <footer class="contatos-local">
-            <p class="chamada">AGENDE SEU HORÁRIO E VENHA FAZER SUA REVISÃO!</p>
-            
-            <div class="telefones">
-                <a href="https://wa.me/5547991517931" target="_blank"><i class="fab fa-whatsapp"></i> 47 991517931</a>
-                <a href="tel:47996837570"><i class="fas fa-mobile-alt"></i> 47 996837570</a>
-            </div>
+/* STATUS DO BOX (LED PISCANDO) */
+.status-box {
+    background: #111; border: 1px dashed #ff0000; padding: 10px;
+    margin-bottom: 20px; border-radius: 5px; display: flex;
+    align-items: center; justify-content: center; gap: 10px;
+}
+.status-text { font-size: 12px; font-weight: bold; color: #ff0000; letter-spacing: 1px; }
+.led-blink {
+    width: 10px; height: 10px; background-color: #ff0000;
+    border-radius: 50%; box-shadow: 0 0 10px #ff0000;
+    animation: flash 1.5s infinite;
+}
+@keyframes flash { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 
-            <div class="endereco">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Av. Marginal Oeste, nº 136, Esquina R. 906 - Alto São Bento, Itapema, Brazil 88220000</p>
-            </div>
+/* GRID DE SERVIÇOS */
+.grid-servicos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
+.cartao-servico {
+    background: #0d0d0d; border: 1px solid #222; padding: 20px 5px;
+    border-radius: 12px; cursor: pointer; transition: 0.3s;
+}
+.cartao-servico:hover { border-color: #ff0000; }
+.cartao-servico i { color: #ff0000; font-size: 28px; margin-bottom: 10px; }
+.info h3 { font-size: 11px; font-weight: 900; }
+.info span { font-size: 10px; color: #777; }
 
-            <button class="botao-acao" onclick="abrirZap('Revisão Geral')">AGENDAR AGORA</button>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+/* CONTATOS E BOTÃO */
+.chamada { font-size: 13px; font-weight: bold; color: #aaa; margin-bottom: 20px; }
+.telefones { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+.telefones a { color: #fff; text-decoration: none; font-size: 14px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+.telefones i { color: #25d366; }
+.endereco { font-size: 11px; color: #888; margin-bottom: 25px; line-height: 1.5; }
+.botao-acao {
+    background-color: #ff0000; color: #fff; border: none; width: 100%;
+    padding: 18px; font-size: 16px; font-weight: 900; border-radius: 6px;
+    cursor: pointer; text-transform: uppercase;
+}
