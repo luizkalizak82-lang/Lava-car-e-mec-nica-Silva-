@@ -1,66 +1,105 @@
-/* RESET GERAL */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Fundo totalmente preto */
+    color: #ffffff; /* Letras brancas */
+    font-family: 'Impact', 'Arial Black', sans-serif;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
 }
 
 .container-principal {
     width: 100%;
-    max-width: 480px;
+    max-width: 450px;
     padding: 20px;
     text-align: center;
 }
 
-/* LOGO FIEL */
-.topo-logo { margin-top: 10px; }
-.ilustracao-carro svg { width: 100%; max-width: 350px; height: auto; }
-.legenda { font-size: 14px; font-weight: 800; letter-spacing: 2.5px; margin-top: -10px; }
+/* LOGO */
+.topo-logo { margin-bottom: 10px; }
+.ilustracao-carro svg { width: 100%; max-width: 300px; }
+
+.legenda {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
 .nome-principal {
-    font-size: 80px; font-weight: 900; font-style: italic;
-    color: #ff0000; line-height: 0.8; letter-spacing: -3px; margin-top: 5px;
+    font-size: 85px; /* Nome SILVA bem grande */
+    color: #ff0000; /* Vermelho igual à logo */
+    font-style: italic;
+    line-height: 0.8;
+    margin-top: 5px;
+    -webkit-text-stroke: 1px #ff0000;
 }
 
-.linha-separadora { border: none; height: 3px; background-color: #ff0000; margin: 25px 0; }
+.linha-vermelha {
+    border: none;
+    height: 4px;
+    background-color: #ff0000;
+    margin: 20px 0;
+}
 
-/* STATUS DO BOX (LED PISCANDO) */
+/* STATUS BOX */
 .status-box {
-    background: #111; border: 1px dashed #ff0000; padding: 10px;
-    margin-bottom: 20px; border-radius: 5px; display: flex;
-    align-items: center; justify-content: center; gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
 }
-.status-text { font-size: 12px; font-weight: bold; color: #ff0000; letter-spacing: 1px; }
+
 .led-blink {
-    width: 10px; height: 10px; background-color: #ff0000;
-    border-radius: 50%; box-shadow: 0 0 10px #ff0000;
-    animation: flash 1.5s infinite;
+    width: 10px; height: 10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0000;
+    animation: blink 1s infinite;
 }
-@keyframes flash { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 
-/* GRID DE SERVIÇOS */
-.grid-servicos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
-.cartao-servico {
-    background: #0d0d0d; border: 1px solid #222; padding: 20px 5px;
-    border-radius: 12px; cursor: pointer; transition: 0.3s;
+@keyframes blink { 0% {opacity: 1} 50% {opacity: 0.3} 100% {opacity: 1} }
+
+.status-text { font-size: 13px; color: #ccc; }
+
+/* SERVIÇOS */
+.grid-servicos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
 }
-.cartao-servico:hover { border-color: #ff0000; }
-.cartao-servico i { color: #ff0000; font-size: 28px; margin-bottom: 10px; }
-.info h3 { font-size: 11px; font-weight: 900; }
-.info span { font-size: 10px; color: #777; }
 
-/* CONTATOS E BOTÃO */
-.chamada { font-size: 13px; font-weight: bold; color: #aaa; margin-bottom: 20px; }
-.telefones { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
-.telefones a { color: #fff; text-decoration: none; font-size: 14px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
-.telefones i { color: #25d366; }
-.endereco { font-size: 11px; color: #888; margin-bottom: 25px; line-height: 1.5; }
-.botao-acao {
-    background-color: #ff0000; color: #fff; border: none; width: 100%;
-    padding: 18px; font-size: 16px; font-weight: 900; border-radius: 6px;
-    cursor: pointer; text-transform: uppercase;
+.servico-item {
+    background: #111;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.servico-item i { color: #ff0000; font-size: 25px; margin-bottom: 10px; }
+.servico-item h3 { font-size: 12px; margin-bottom: 5px; }
+.servico-item span { font-size: 10px; color: #666; }
+
+/* RODAPÉ */
+.chamada { font-size: 12px; color: #888; margin-bottom: 15px; }
+.contatos { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.contatos a { color: #fff; text-decoration: none; font-size: 16px; font-weight: bold; }
+.contatos i { color: #25d366; margin-right: 5px; }
+
+.local { font-size: 11px; color: #555; margin-bottom: 25px; }
+
+.btn-agendar {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 18px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
