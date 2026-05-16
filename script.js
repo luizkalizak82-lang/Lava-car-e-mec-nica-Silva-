@@ -4,8 +4,8 @@ function abrirZap(servico) {
     window.open(`https://wa.me/${telefone}?text=${mensagem}`, '_blank');
 }
 
-// Lógica para variar as vagas entre 1 e 2
 document.addEventListener('DOMContentLoaded', () => {
     const vagas = document.getElementById('vagas-count');
+    // Gera 1 ou 2 vagas disponíveis para criar urgência
     vagas.innerText = Math.floor(Math.random() * 2) + 1;
 });
