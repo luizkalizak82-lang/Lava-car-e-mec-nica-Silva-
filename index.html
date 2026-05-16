@@ -12,9 +12,9 @@
     <div class="container-principal">
         <header class="topo-logo">
             <div class="ilustracao-carro">
-                <svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50,110 L150,110 C180,110 200,60 300,55 C400,50 450,110 480,120" fill="none" stroke="#ff0000" stroke-width="15" stroke-linecap="round"/>
-                    <path d="M220,65 C280,60 350,60 380,105" fill="none" stroke="#ff0000" stroke-width="8" stroke-linecap="round"/>
+                <svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40,120 L130,120 C160,120 180,60 280,55 C380,50 440,110 470,125" fill="none" stroke="#ff0000" stroke-width="16" stroke-linecap="round"/>
+                    <path d="M210,70 C270,60 340,65 375,110" fill="none" stroke="#ff0000" stroke-width="9" stroke-linecap="round"/>
                 </svg>
             </div>
             <div class="textos-marca">
@@ -23,64 +23,55 @@
             </div>
         </header>
 
-        <hr class="linha-vermelha">
+        <hr class="linha-separadora">
 
         <div class="status-box">
             <div class="led-blink"></div>
             <span class="status-text">STATUS DO BOX: <strong id="vagas-count">1</strong> VAGA PARA HOJE</span>
         </div>
 
-        <main class="grid-servicos">
-            <div class="servico-item" onclick="abrirZap('Mecânica em Geral')">
+        <main class="lista-servicos">
+            <div class="item-servico" onclick="abrirZap('Mecânica em Geral')">
                 <i class="fas fa-cog"></i>
-                <div class="txt">
+                <div class="detalhe">
                     <h3>MECÂNICA EM GERAL</h3>
                     <span>General Mechanics</span>
                 </div>
             </div>
 
-            <div class="servico-item" onclick="abrirZap('Troca de Óleo')">
-                <i class="fas fa-oil-can"></i>
-                <div class="txt">
+            <div class="item-servico" onclick="abrirZap('Troca de Óleo')">
+                <i class="fas fa-car"></i>
+                <div class="detalhe">
                     <h3>TROCA DE ÓLEO</h3>
                     <span>Oil Change</span>
                 </div>
             </div>
 
-            <div class="servico-item" onclick="abrirZap('Suspensão')">
+            <div class="item-servico" onclick="abrirZap('Suspensão')">
                 <i class="fas fa-tools"></i>
-                <div class="txt">
+                <div class="detalhe">
                     <h3>SUSPENSÃO</h3>
                     <span>Suspension</span>
                 </div>
             </div>
 
-            <div class="servico-item" onclick="abrirZap('Lavação')">
-                <i class="fas fa-car-wash"></i>
-                <div class="txt">
+            <div class="item-servico" onclick="abrirZap('Lavação')">
+                <i class="fas fa-tint"></i>
+                <div class="detalhe">
                     <h3>LAVAÇÃO</h3>
                     <span>Car Wash</span>
                 </div>
             </div>
         </main>
 
-        <footer class="rodape">
-            <p class="chamada">AGENDE SEU HORÁRIO E VENHA FAZER SUA REVISÃO!</p>
+        <footer class="rodape-info">
+            <p class="chamada">AGENDE SEU HORÁRIO, E VENHA FAZER SUA REVISÃO</p>
             
-            <div class="contatos">
-                <a href="https://wa.me/5547991517931"><i class="fab fa-whatsapp"></i> 47 991517931</a>
-                <a href="https://wa.me/5547996837570"><i class="fab fa-whatsapp"></i> 47 996837570</a>
+            <div class="contatos-whats">
+                <a href="https://wa.me/5547991517931" target="_blank"><i class="fab fa-whatsapp"></i> 47 991517931</a>
+                <a href="https://wa.me/5547996837570" target="_blank"><i class="fab fa-whatsapp"></i> 47 996837570</a>
             </div>
 
-            <div class="local">
+            <div class="localizacao">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>Av. Marginal Oeste, nº 136, Esquina R. 906 - Alto São Bento, Itapema, Brazil 88220000</p>
-            </div>
-
-            <button class="btn-agendar" onclick="abrirZap('Geral')">AGENDAR AGORA</button>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                <p>Av. Marginal Oeste, nº 136, Esquina R. 906 - Alto São Bento, It
